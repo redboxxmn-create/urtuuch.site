@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "news"
+    label: "Мэдээнүүд"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Гарчиг", name: "title", widget: "string" }
+      - { label: "Огноо", name: "date", widget: "datetime" }
+      - { label: "Зураг", name: "thumbnail", widget: "image" }
+      - { label: "Товч агуулга", name: "excerpt", widget: "string" }
+      - { label: "Агуулга", name: "body", widget: "markdown" }
